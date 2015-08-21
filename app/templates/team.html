@@ -1,3 +1,8 @@
-<div>
-  team
+<div ng-controller="teamCtrl">
+  <div ng-show="showTeam()">
+    <member-list></member-list>
+  </div>
+  <div ng-show="showMember()">
+    <member-page memberid="memberID"></member-page>
+  </div>
 </div>

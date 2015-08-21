@@ -43,15 +43,51 @@ cms.directive("projectList", function () {
   };
 });
 
-cms.directive('project', function(){
+cms.directive('projectPage', function(){
   return {
     restrict: 'E',
-    templateUrl: 'templates/projectpanel.html',
+    templateUrl: 'templates/projectpage.html',
     scope: {
       slug: '='
     },
-    controllerAs: 'projectCtrl',
+    controllerAs: 'projectpageCtrl',
     controller: function($scope){
+      $scope.cms = cmsJson;
+    }
+  }
+});
+
+cms.controller('teamCtrl', function ($scope, $routeParams) {
+  $scope.memberID = $routeParams.memberID;
+  $scope.showTeam = function () {
+    return $routeParams.memberID == "" || $routeParams.memberID == undefined;
+  };
+  $scope.showMember = function () {
+    return !$scope.showTeam();
+  };
+})
+
+cms.directive("memberList", function () {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/memberlist.html',
+    controllerAs: "memberlistCtrl",
+    controller: function ($scope) {
+      $scope.team = cmsJson.team;
+    }
+  };
+});
+
+cms.directive('memberPage', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/memberpage.html',
+    scope: {
+      memberid: '='
+    },
+    controllerAs: 'memberCtrl',
+    controller: function($scope){
+      $scope.memberID = $scope.memberid;
       $scope.cms = cmsJson;
     }
   }

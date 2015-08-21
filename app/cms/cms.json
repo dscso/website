@@ -32,6 +32,17 @@
       "slug":"test2"
     }
   }],
+  "team":[{
+    "id":"mrx",
+    "name":"Mister X",
+    "description":"unknown person",
+    "longDescription":"hello I am one of 7 billion human beings in the world."
+  },{
+    "id":"mry",
+    "name":"Mister Y",
+    "description":"Y person",
+    "longDescription":"hello I am one of 7 billion human beings in the world. but I am very important! 😏😎"
+  }],
 
   "resources":[{
     "id":"chart-image",
