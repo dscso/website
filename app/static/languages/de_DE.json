@@ -1,0 +1,10 @@
+{
+    "name":"Klima-AG",
+    "navbar":{
+      "home":"Home",
+      "projects":"Projekte",
+      "team":"Mitglieder"
+    },
+    "news_label":"News:",
+    "filter_label":"Filter:"
+}

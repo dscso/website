@@ -1,0 +1,10 @@
+{
+    "name":"Climate working team",
+    "navbar":{
+      "home":"Home",
+      "projects":"Projects",
+      "team":"Team"
+    },
+    "news_label":"News:",
+    "filter_label":"Filter:"
+}

@@ -1,0 +1,9 @@
+<div>
+  <label>{{'filter_label' | translate}} <input ng-model="filterText"></label>
+  <li ng-repeat="project in projects | filter:filterText" class="list-group-item">
+    <a style="color:inherit;text-decoration:none;" href="#projects?slug={{project.slug}}">
+      <p class="name-label">{{project.name}}</p>
+      <p class="description-text">{{project.description}}</p>
+    </a>
+  </li>
+</div>
