@@ -3,23 +3,27 @@
 echo "Cleanup...";
 rm -fr bower_components/
 echo "Downloading..."
-bower install bootstrap angular-route angular-translate-loader-static-files angular-translate-storage-cookie angular-translate-storage-local chartist angular-websocket --allow-root
+bower install bootstrap markdown-js chartist angular-route angular-translate-loader-static-files angular-translate-storage-cookie angular-translate-storage-local angular-websocket angular-sanitize --allow-root
 echo "Removing old files..."
 rm -fr app/static/lib/*
 echo "Creating dirs..."
-mkdir app/static/lib/jquery
-mkdir app/static/lib/bootstrap
-mkdir app/static/lib/fonts
-mkdir -p app/static/lib/angularjs/plugins/angular-route
-mkdir app/static/lib/angularjs/plugins/angular-translate
+mkdir app/static/lib/jquery/
+mkdir app/static/lib/bootstrap/
+mkdir app/static/lib/fonts/
+mkdir -p app/static/lib/angularjs/plugins/angular-route/
+mkdir app/static/lib/angularjs/plugins/angular-sanitize/
+mkdir app/static/lib/angularjs/plugins/angular-translate/
 mkdir app/static/lib/angularjs/plugins/angular-cookies/
 mkdir app/static/lib/angularjs/plugins/angular-websocket/
-mkdir app/static/lib/chartist
+mkdir app/static/lib/chartist/
+mkdir app/static/lib/markdown-js/
 echo "Copying files into static/lib..."
 # angular
 cp bower_components/angular/angular.min.js app/static/lib/angularjs/
 # angular-route
 cp bower_components/angular-route/angular-route.min.js app/static/lib/angularjs/plugins/angular-route/
+# angular-sanitize
+cp bower_components/angular-sanitize/angular-sanitize.min.js app/static/lib/angularjs/plugins/angular-sanitize/
 # angular-translate
 cp bower_components/angular-translate/angular-translate.min.js app/static/lib/angularjs/plugins/angular-translate/
 cp bower_components/angular-cookies/angular-cookies.min.js app/static/lib/angularjs/plugins/angular-cookies/
@@ -38,6 +42,8 @@ cp bower_components/jquery/dist/jquery.min.js app/static/lib/jquery/
 # chartist
 cp bower_components/chartist/dist/chartist.min.css app/static/lib/chartist/
 cp bower_components/chartist/dist/chartist.min.js app/static/lib/chartist/
+# markdown-js
+cp bower_components/markdown-js/dist/markdown.min.js app/static/lib/markdown-js
 
 echo "Removing bower_components/..."
 rm -fr bower_components/

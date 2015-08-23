@@ -1,4 +1,4 @@
-var cms = angular.module("cms", []);
+var cms = angular.module("cms", ['ngSanitize']);
 var cmsJson = {};
 
 cms.run(['$http', function ($http) {
@@ -6,6 +6,13 @@ cms.run(['$http', function ($http) {
     cmsJson = response;
   });
 }]);
+
+cms.filter('md', function() {
+  return function(input) {
+    if (!input || !input.length) { return; }
+    return markdown.toHTML(input);
+  };
+});
 
 cms.directive('newsPanel', function () {
     return {
@@ -53,6 +60,15 @@ cms.directive('projectPage', function(){
     controllerAs: 'projectpageCtrl',
     controller: function($scope){
       $scope.cms = cmsJson;
+      $scope.project = null;
+      cmsJson.projects.forEach(function (element) {
+        if (element.slug == $scope.slug) {
+          $scope.project = element;
+        }
+      });
+      if ($scope.project == null) {
+        $scope.notFound = true;
+      }
     }
   }
 });
@@ -89,6 +105,15 @@ cms.directive('memberPage', function() {
     controller: function($scope){
       $scope.memberID = $scope.memberid;
       $scope.cms = cmsJson;
+      $scope.member = null;
+      cmsJson.team.forEach(function (element) {
+        if (element.id == $scope.memberid) {
+          $scope.member = element;
+        }
+      });
+      if ($scope.member == null) {
+        $scope.notFound = true;
+      }
     }
   }
 });

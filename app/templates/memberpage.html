@@ -1,3 +1,14 @@
 <div>
-  {{memberID}}
+  <div ng-show="!notFound">
+    <center>
+      <h2>{{member.name}}</h2>
+    </center>
+    <div ng-bind-html="member.longDescription | md"></div>
+ </div>
+  <div ng-show="notFound">
+    <center>
+      <h1>404</h1>
+      <p>not found</p>
+    </center>
+  </div>
 </div>

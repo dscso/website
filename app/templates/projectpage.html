@@ -1,3 +1,14 @@
 <div>
-  {{slug}}
+  <div ng-show="!notFound">
+    <center>
+      <h2>{{project.name}}</h2>
+    </center>
+    <div ng-bind-html="project.content | md"></div>
+  </div>
+  <div ng-show="notFound">
+    <center>
+      <h1>404</h1>
+      <p>not found</p>
+    </center>
+  </div>
 </div>

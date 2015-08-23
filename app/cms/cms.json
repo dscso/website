@@ -3,7 +3,7 @@
     "slug":"test-project",
     "name":"a realy nice test project!",
     "description":"descriptiontext of projet 1 lalala",
-    "content":"this is a text without meaning."
+    "content":"this is a text without meaning. <a href>link?!</a> \n#header\ntext"
   },{
     "slug":"test-project2",
     "name":"SIIIIIPPPP ",
@@ -36,12 +36,12 @@
     "id":"mrx",
     "name":"Mister X",
     "description":"unknown person",
-    "longDescription":"hello I am one of 7 billion human beings in the world."
+    "longDescription":"Hello.\n\n* This is markdown.\n* bla"
   },{
     "id":"mry",
     "name":"Mister Y",
     "description":"Y person",
-    "longDescription":"hello I am one of 7 billion human beings in the world. but I am very important! 😏😎"
+    "longDescription":"hello I am one of 7 billion human beings in the world. but I am very important! \n#header"
   }],
 
   "resources":[{

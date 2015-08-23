@@ -1,5 +1,8 @@
 <div>
-  <label>{{'filter_label' | translate}} <input ng-model="filterText"></label>
+  <div class="form-group form-inline">
+    <label for="searchField">{{'filter_label' | translate}}</label>
+    <input type="text" class="form-control" id="searchField" ng-model="filterText">
+  </div>
   <li ng-repeat="member in team | filter:filterText" class="list-group-item">
     <a style="color:inherit;text-decoration:none;" href="#team?memberID={{member.id}}">
       <p class="name-label">{{member.name}}</p>
