@@ -1,4 +1,5 @@
 {
+    "date_day":"{{date | date:'MM/dd/yyyy'}}",
     "name":"Climate working team",
     "navbar":{
       "home":"Home",

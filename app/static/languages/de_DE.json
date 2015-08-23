@@ -1,4 +1,5 @@
 {
+    "date_day":"{{date|date:'dd.MM.yyyy'}}",
     "name":"Klima-AG",
     "navbar":{
       "home":"Home",

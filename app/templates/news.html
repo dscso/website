@@ -1,7 +1,7 @@
 <div ng-controller="newsCtrl">
   <a href="#/news" class="header1" style="color:#000000;text-decoration:inherit;">{{'news_label' | translate}}</a>
   <li ng-repeat="news in cms.News | orderBy:'-date'" class="list-group-item">
-    <a href="{{ generateUrl(news.location) }}" style="color:inherit;text-decoration:inherit;"><span class="name-label">{{news.title}}</span> <span class="date-label">({{ news.date | date }})</span>
+    <a href="{{ generateUrl(news.location) }}" style="color:inherit;text-decoration:inherit;"><span class="name-label">{{news.title}}</span> <span class="date-label">({{'date_day' | translate:{date:news.date} }})</span>
       <p class="description-text">{{news.text}}</p>
     </a>
   </li>

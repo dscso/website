@@ -3,7 +3,7 @@ var realtimedata = angular.module('wind-realtimedata', [
 ]);
 
 realtimedata.factory('websocketFactory', function($websocket) {
-  var ws = $websocket('ws://echo.websocket.org/');
+  var ws = $websocket(settings.websocketUrl);
   ws.onMessage(function(message) {
     console.log("websocket-receive: ", message)
   });
