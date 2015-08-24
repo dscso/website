@@ -6,7 +6,7 @@
   <li ng-repeat="project in projects | filter:filterText" class="list-group-item">
     <a style="color:inherit;text-decoration:none;" href="#projects?slug={{project.slug}}">
       <p class="name-label">{{project.name}}</p>
-      <p class="description-text">{{project.description}}</p>
+      <p class="description-text" ng-bind-html="project.description | md"></p>
     </a>
   </li>
 </div>

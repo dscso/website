@@ -6,7 +6,7 @@
   <li ng-repeat="member in team | filter:filterText" class="list-group-item">
     <a style="color:inherit;text-decoration:none;" href="#team?memberID={{member.id}}">
       <p class="name-label">{{member.name}}</p>
-      <p class="description-text">{{member.description}}</p>
+      <p class="description-text" ng-bind-html="member.description | md"></p>
     </a>
   </li>
 </div>
