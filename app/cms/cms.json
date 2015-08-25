@@ -3,7 +3,7 @@
     "slug":"test-project",
     "name":"a realy nice test project!",
     "description":"descriptiontext of projet `1` lalala",
-    "content":"this is a text without meaning. <a href>link?!</a> \n#header\ntext\n\n      <html>\n        <body>\n          <center>\n            <h1>test</h1>\n          </center>\n        </body>\n      </html>\n\n"
+    "content":"this is a text without meaning. <a href>link?!</a> \n#header\ntext\n\n      <html>\n        <body>\n          <center>\n            <h1>test</h1>\n          </center>\n        </body>\n      </html>\n\n![chart-image]"
   },{
     "slug":"test-project2",
     "name":"SIIIIIPPPP ",
